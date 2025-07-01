@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: n8n-cristian
+    env: docker
+    plan: free
+    image: n8nio/n8n
+    autoDeploy: false
+    envVars:
+      - key: N8N_HOST
+        value: n8n-cristian.onrender.com
+      - key: N8N_PORT
+        value: 5678
+      - key: WEBHOOK_URL
+        value: https://n8n-cristian.onrender.com
+      - key: N8N_ENCRYPTION_KEY
+        value: Gerencia2023@Gerencia2023@Gerencia2023@
+      - key: NODE_ENV
+        value: production
+    disk:
+      name: n8n-data
+      mountPath: /home/node/.n8n
+      sizeGB: 1
