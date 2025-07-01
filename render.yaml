@@ -1,5 +1,5 @@
 services:
-  - type: web
+  - type: docker
     name: n8n-cristian
     env: docker
     plan: free
